@@ -1,0 +1,7 @@
+com.kimaddons.app-pngs-0 /workspaces/KIM-ADDONS/app/build/generated/res/pngs/debug
+com.kimaddons.app-resValues-1 /workspaces/KIM-ADDONS/app/build/generated/res/resValues/debug
+com.kimaddons.app-packageDebugResources-2 /workspaces/KIM-ADDONS/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.kimaddons.app-packageDebugResources-3 /workspaces/KIM-ADDONS/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.kimaddons.app-debug-4 /workspaces/KIM-ADDONS/app/build/intermediates/merged_res/debug/mergeDebugResources
+com.kimaddons.app-debug-5 /workspaces/KIM-ADDONS/app/src/debug/res
+com.kimaddons.app-main-6 /workspaces/KIM-ADDONS/app/src/main/res

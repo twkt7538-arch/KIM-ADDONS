@@ -1,0 +1,44 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.kimaddons.app"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/workspaces/KIM-ADDONS/app/src/main/AndroidManifest.xml:2:5-67
+11-->/workspaces/KIM-ADDONS/app/src/main/AndroidManifest.xml:2:22-64
+12
+13    <application
+13-->/workspaces/KIM-ADDONS/app/src/main/AndroidManifest.xml:3:5-10:19
+14        android:debuggable="true"
+15        android:extractNativeLibs="false"
+16        android:label="KIM ADDONS"
+16-->/workspaces/KIM-ADDONS/app/src/main/AndroidManifest.xml:3:76-102
+17        android:theme="@android:style/Theme.Material.NoActionBar"
+17-->/workspaces/KIM-ADDONS/app/src/main/AndroidManifest.xml:3:18-75
+18        android:usesCleartextTraffic="false" >
+18-->/workspaces/KIM-ADDONS/app/src/main/AndroidManifest.xml:3:103-139
+19        <activity
+19-->/workspaces/KIM-ADDONS/app/src/main/AndroidManifest.xml:4:9-9:20
+20            android:name="com.kimaddons.app.MainActivity"
+20-->/workspaces/KIM-ADDONS/app/src/main/AndroidManifest.xml:4:19-47
+21            android:exported="true" >
+21-->/workspaces/KIM-ADDONS/app/src/main/AndroidManifest.xml:4:48-71
+22            <intent-filter>
+22-->/workspaces/KIM-ADDONS/app/src/main/AndroidManifest.xml:5:13-8:29
+23                <action android:name="android.intent.action.MAIN" />
+23-->/workspaces/KIM-ADDONS/app/src/main/AndroidManifest.xml:6:17-69
+23-->/workspaces/KIM-ADDONS/app/src/main/AndroidManifest.xml:6:25-66
+24
+25                <category android:name="android.intent.category.LAUNCHER" />
+25-->/workspaces/KIM-ADDONS/app/src/main/AndroidManifest.xml:7:17-77
+25-->/workspaces/KIM-ADDONS/app/src/main/AndroidManifest.xml:7:27-74
+26            </intent-filter>
+27        </activity>
+28    </application>
+29
+30</manifest>

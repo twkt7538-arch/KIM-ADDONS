@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#100d14">
+<title>KIM ADDONS</title>
+<style>
+:root{--bg:#100d14;--panel:#211c27;--panel2:#2b2433;--purple:#c8a5ff;--purple2:#9d4edd;--text:#f5efff;--muted:#aaa0b5;--line:#403747}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans Arabic",sans-serif;padding-bottom:86px}
+header{padding:25px 18px 15px;background:linear-gradient(140deg,#21152c,#100d14 70%)}.brand{font-size:25px;font-weight:900;letter-spacing:.4px}.brand span{color:var(--purple)}.sub{color:var(--muted);font-size:12px;margin-top:3px}
+.search{display:flex;gap:8px;margin-top:18px}.search input{width:100%;border:1px solid var(--line);background:var(--panel);color:white;border-radius:24px;padding:14px 17px;font-size:15px;outline:none}.search input:focus{border-color:var(--purple)}
+main{padding:10px 16px}.hero{padding:19px;border-radius:20px;background:linear-gradient(130deg,#4b1b76,#25133c 55%,#17111f);border:1px solid #593777;overflow:hidden;position:relative}.hero:after{content:"✦";font-size:110px;position:absolute;left:13px;top:-25px;color:#ffffff15}.eyebrow{font-size:12px;color:#e0caff}.hero h1{font-size:23px;margin:8px 0}.hero p{font-size:13px;color:#e1d5ef;margin:0 0 14px}.pill{border:0;border-radius:20px;background:var(--purple);color:#241433;font-weight:800;padding:10px 16px}
+.cats{display:flex;gap:8px;overflow:auto;padding:16px 0}.cat{white-space:nowrap;border:1px solid var(--line);border-radius:20px;background:var(--panel);color:var(--purple);padding:10px 14px;font-weight:700}.cat.active{background:var(--purple);color:#21152b}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin:15px 0 10px}.section-head h2{font-size:15px;letter-spacing:.5px;margin:0}.section-head small{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{background:var(--panel);border:1px solid #2e2735;border-radius:15px;overflow:hidden;min-width:0}.art{height:112px;display:grid;place-items:center;font-size:47px;background:linear-gradient(135deg,#39214c,#18131f);position:relative}.art .tag{position:absolute;top:8px;right:8px;font-size:10px;background:#100d14c9;color:#e6d4ff;padding:4px 7px;border-radius:8px}.info{padding:11px}.info h3{font-size:14px;margin:0 0 6px;line-height:1.4}.desc{font-size:11px;color:var(--muted);height:31px;overflow:hidden}.meta{display:flex;align-items:center;justify-content:space-between;margin-top:9px;font-size:11px;color:var(--muted)}.mini{border:0;border-radius:9px;padding:7px 9px;background:#3c2c4e;color:#e4ceff;font-weight:700}.mini.saved{background:var(--purple);color:#21152b}
+.empty{color:var(--muted);text-align:center;padding:30px 8px;grid-column:1/-1}.page-title{font-size:24px;margin:12px 0 18px}.settings-box{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:4px 15px;margin-bottom:14px}.setting{display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);gap:10px}.setting:last-child{border-bottom:0}.setting small{display:block;color:var(--muted);margin-top:4px}.toggle{accent-color:var(--purple);width:23px;height:23px}.select{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:9px;border-radius:10px}.bottom{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:space-around;background:#211c27;border-top:1px solid var(--line);padding:8px 4px max(8px,env(safe-area-inset-bottom));z-index:4}.nav{background:transparent;border:0;color:var(--muted);font-size:11px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 9px;border-radius:18px;min-width:65px}.nav b{font-size:23px;line-height:1.1}.nav.active{background:#493957;color:var(--purple)}.detail{position:fixed;inset:0;background:#100d14;z-index:8;overflow:auto;padding:20px;display:none}.detail.open{display:block}.back{border:0;background:var(--panel2);color:var(--text);padding:10px 14px;border-radius:12px}.detail-art{height:210px;border-radius:20px;display:grid;place-items:center;font-size:90px;background:linear-gradient(135deg,#4b1b76,#17111f);margin:20px 0}.detail p{color:var(--muted);line-height:1.8}.full{width:100%;padding:14px;border:0;border-radius:13px;background:var(--purple);color:#21152b;font-weight:900;font-size:15px;margin-top:10px}.note{font-size:11px;color:var(--muted);line-height:1.7;margin-top:12px}
+</style></head>
+<body>
+<header><div class="brand">KIM <span>ADDONS</span> ✦</div><div class="sub">عالم إضافات Minecraft Bedrock</div><div class="search"><input id="search" placeholder="ابحث عن إضافة أو عالم..." autocomplete="off"></div></header>
+<main id="main"></main>
+<nav class="bottom">
+<button class="nav active" data-page="home"><b>⌂</b>الرئيسية</button>
+<button class="nav" data-page="downloads"><b>⇩</b>التحميلات</button>
+<button class="nav" data-page="saved"><b>♡</b>المفضلة</button>
+<button class="nav" data-page="settings"><b>⚙</b>الإعدادات</button>
+</nav>
+<div id="detail" class="detail"><button class="back" id="back">← رجوع</button><div id="detailBody"></div></div>
+<script>
+const $=s=>document.querySelector(s);
+const items=[
+{id:'backpack',name:'حقائب المغامرة',category:'addons',emoji:'🎒',desc:'فكرة إضافة حقائب لحمل أغراض أكثر أثناء الاستكشاف.',version:'Bedrock',color:'',file:null},
+{id:'magic',name:'كنوز سحرية',category:'addons',emoji:'🔮',desc:'تصميم مبدئي لعنصر سحري ضمن كتالوج KIM ADDONS.',version:'Bedrock',file:null},
+{id:'dungeons',name:'قلاع الأبراج المحصنة',category:'worlds',emoji:'🏰',desc:'عالم استكشاف خيالي؛ أضف ملف العالم الحقيقي عند توفره.',version:'World',file:null},
+{id:'textures',name:'لمسات بنفسجية',category:'textures',emoji:'💎',desc:'تصور لحزمة خامات بألوان داكنة وبنفسجية.',version:'Texture Pack',file:null},
+{id:'tools',name:'أدوات أسطورية',category:'addons',emoji:'⚔️',desc:'فكرة مجموعة أدوات قوية لعالم البقاء.',version:'Bedrock',file:null},
+{id:'pets',name:'رفاق البرية',category:'addons',emoji:'🐺',desc:'فكرة إضافة كائنات ورفاق للاستكشاف.',version:'Bedrock',file:null}
+];
+let page='home', category='all', query='', selected=null;
+const load=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}};
+let saved=load('kim_saved',[]), downloads=load('kim_downloads',[]), settings=load('kim_settings',{dark:true,compact:false,lang:'ar'});
+function persist(){localStorage.setItem('kim_saved',JSON.stringify(saved));localStorage.setItem('kim_downloads',JSON.stringify(downloads));localStorage.setItem('kim_settings',JSON.stringify(settings))}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function card(x){return `<article class="card"><div class="art" data-open="${x.id}"><span>${x.emoji}</span><span class="tag">${x.version}</span></div><div class="info"><h3>${escapeHtml(x.name)}</h3><div class="desc">${escapeHtml(x.desc)}</div><div class="meta"><span>Bedrock</span><button class="mini ${saved.includes(x.id)?'saved':''}" data-save="${x.id}">${saved.includes(x.id)?'♥':'♡'}</button></div><button class="full" data-open="${x.id}">التفاصيل</button></div></article>`}
+function filtered(){return items.filter(x=>(category==='all'||x.category===category)&&(`${x.name} ${x.desc}`).toLowerCase().includes(query.toLowerCase()))}
+function render(){
+ document.querySelectorAll('.nav').forEach(b=>b.classList.toggle('active',b.dataset.page===page));
+ const main=$('#main');
+ if(page==='settings'){main.innerHTML=`<h1 class="page-title">الإعدادات</h1><section class="settings-box"><div class="setting"><div>الوضع الداكن<small>واجهة مريحة للعين</small></div><input class="toggle" id="dark" type="checkbox" ${settings.dark?'checked':''}></div><div class="setting"><div>عرض مضغوط<small>إظهار بطاقات أكثر</small></div><input class="toggle" id="compact" type="checkbox" ${settings.compact?'checked':''}></div><div class="setting"><div>لغة المحتوى<small>لغة أسماء الإضافات</small></div><select id="lang" class="select"><option value="ar" ${settings.lang==='ar'?'selected':''}>العربية</option><option value="en" ${settings.lang==='en'?'selected':''}>English</option></select></div></section><p class="note">الإعدادات محفوظة محلياً على هذا الجهاز. الإصدار الحالي لا يرسل بياناتك إلى خادم.</p>`;
+ $('#dark').onchange=e=>{settings.dark=e.target.checked;document.body.style.filter=settings.dark?'none':'brightness(1.12)';persist()};$('#compact').onchange=e=>{settings.compact=e.target.checked;document.querySelectorAll('.art').forEach(a=>a.style.height=settings.compact?'78px':'112px');persist()};$('#lang').onchange=e=>{settings.lang=e.target.value;persist();alert('تم حفظ تفضيل اللغة. واجهة الإصدار الحالي عربية.');};return}
+ if(page==='downloads'){let arr=items.filter(x=>downloads.includes(x.id));main.innerHTML=`<h1 class="page-title">التحميلات</h1><div class="grid">${arr.length?arr.map(card).join(''):'<div class="empty">لا توجد ملفات تم تنزيلها بعد.<br>لن تظهر هنا إلا الملفات التي تم تنزيلها فعلياً.</div>'}</div>`;return}
+ if(page==='saved'){let arr=items.filter(x=>saved.includes(x.id));main.innerHTML=`<h1 class="page-title">المفضلة</h1><div class="grid">${arr.length?arr.map(card).join(''):'<div class="empty">لم تضف أي عنصر للمفضلة بعد.<br>اضغط ♡ على بطاقة لحفظها هنا.</div>'}</div>`;return}
+ main.innerHTML=`<section class="hero"><div class="eyebrow">✦ مكتبة Minecraft Bedrock</div><h1>اكتشف عالمك القادم</h1><p>إضافات وعوالم وأفكار جديدة، في مكان واحد.</p><button class="pill" data-category="all">استكشف المكتبة　←</button></section><div class="cats"><button class="cat ${category==='all'?'active':''}" data-category="all">الكل</button><button class="cat ${category==='addons'?'active':''}" data-category="addons">✣ إضافات</button><button class="cat ${category==='worlds'?'active':''}" data-category="worlds">▣ عوالم</button><button class="cat ${category==='textures'?'active':''}" data-category="textures">✧ حزم الخامات</button></div><div class="section-head"><h2>إصدارات المكتبة</h2><small>${filtered().length} عناصر</small></div><div class="grid">${filtered().map(card).join('')||'<div class="empty">لا توجد نتائج مطابقة. جرّب كلمة أخرى.</div>'}</div><p class="note">مهم: العناصر الحالية بطاقات أولية للتجربة وليست ملفات مود قابلة للتثبيت. لن نعرض زر تنزيل مزيفاً؛ نضيف التنزيل الحقيقي عند إدراج ملفات موثوقة.</p>`;
+}
+function openDetail(id){const x=items.find(i=>i.id===id);if(!x)return;selected=x;$('#detailBody').innerHTML=`<div class="detail-art">${x.emoji}</div><h1>${escapeHtml(x.name)}</h1><p>${escapeHtml(x.desc)}</p><p>النوع: ${x.category==='addons'?'إضافة':x.category==='worlds'?'عالم':'حزمة خامات'}<br>المنصة: Minecraft Bedrock<br>حالة الملف: <b>لم تتم إضافة ملف حقيقي بعد</b></p><button class="full" id="saveDetail">${saved.includes(x.id)?'إزالة من المفضلة':'إضافة إلى المفضلة'}</button><p class="note">لن يبدأ التنزيل لأن ملف الإضافة غير موجود في الإصدار الأولي. هذا يمنع روابط وهمية أو ملفات غير موثوقة.</p>`;$('#detail').classList.add('open');$('#saveDetail').onclick=()=>{toggleSave(x.id);openDetail(id)}}
+function toggleSave(id){saved=saved.includes(id)?saved.filter(v=>v!==id):[...saved,id];persist();render()}
+document.addEventListener('click',e=>{const n=e.target.closest('[data-page]');if(n){page=n.dataset.page;render();return}const c=e.target.closest('[data-category]');if(c){category=c.dataset.category;page='home';render();return}const s=e.target.closest('[data-save]');if(s){toggleSave(s.dataset.save);return}const o=e.target.closest('[data-open]');if(o){openDetail(o.dataset.open);return}});
+document.querySelectorAll('.nav').forEach(b=>b.addEventListener('click',()=>{page=b.dataset.page;render()}));
+$('#search').addEventListener('input',e=>{query=e.target.value;if(page!=='home')page='home';render()});
+$('#back').onclick=()=>$('#detail').classList.remove('open');
+if(!settings.dark)document.body.style.filter='brightness(1.12)';
+render();
+// Basic self-tests: no duplicate IDs; every category is supported; local persistence round-trip.
+(function(){const ids=items.map(x=>x.id);console.assert(new Set(ids).size===ids.length,'Test failed: duplicate item IDs');console.assert(items.every(x=>['addons','worlds','textures'].includes(x.category)),'Test failed: unknown category');const old=localStorage.getItem('kim_test');localStorage.setItem('kim_test','{"ok":true}');console.assert(JSON.parse(localStorage.getItem('kim_test')).ok===true,'Test failed: local storage');if(old===null)localStorage.removeItem('kim_test');else localStorage.setItem('kim_test',old);})();
+</script></body></html>
